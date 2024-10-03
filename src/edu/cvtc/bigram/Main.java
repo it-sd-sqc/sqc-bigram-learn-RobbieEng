@@ -150,6 +150,32 @@ public class Main {
       w0 = w1;
     }
   } // end of createBigrams
+/*
+public static void createBigrams(Connection db, String src) throws SQLException {
+  if (db == null || db.isClosed() || src == null) {
+      return;
+  }
+
+  try (Scanner scanner = new Scanner(src)) {
+      if (!scanner.hasNext()) {
+          return;
+      }
+
+      int w0 = getId(db, scanner.next());
+      while (scanner.hasNext()) {
+          int w1 = getId(db, scanner.next());
+          addBigram(db, w0, w1);
+          w0 = w1;
+      }
+  } catch (SQLException e) {
+      // Handle or log the SQL exception
+      e.printStackTrace(); // Or use a logging framework
+  } catch (Exception e) {
+      // Handle any other exceptions
+      e.printStackTrace(); // Or use a logging framework
+  }
+}
+ */
 
   // Creates a bigram in the provided database for the provided word ids.
   // The provided word ids are assumed to indicate valid words to improve
